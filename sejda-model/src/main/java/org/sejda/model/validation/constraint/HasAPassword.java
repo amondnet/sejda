@@ -32,6 +32,7 @@ import java.lang.annotation.Target;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
+import org.sejda.model.validation.validator.HasAPasswordValidator;
 
 /**
  * Constraint validating that the encryption parameters have one among user and owner password.
@@ -39,7 +40,7 @@ import javax.validation.Payload;
  * @author Andrea Vacondio
  * 
  */
-@Constraint(validatedBy = {})
+@Constraint(validatedBy = {HasAPasswordValidator.class})
 @Target({ METHOD, FIELD, ANNOTATION_TYPE, PARAMETER, TYPE })
 @Retention(RUNTIME)
 @Documented
